@@ -1,0 +1,174 @@
+/* Mobile-first responsive design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+    background-image: radial-gradient(circle, rgba(255,182,193,0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #333;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chapter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Hide all chapters by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.chapter.active {
+    display: flex; /* Show only the active chapter */
+}
+
+.content {
+    text-align: center;
+    max-width: 90%;
+    animation: fadeIn 1s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+.text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: type 3s steps(40, end) forwards;
+}
+
+@keyframes type {
+    from { width: 0; }
+    to { width: 100%; opacity: 1; }
+}
+
+.carousel {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch; /* Smooth touch scrolling on iOS */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-snap-type: x mandatory; /* Snap to images */
+    width: 100%; /* Ensure full width for scrolling */
+    max-width: 600px; /* Limit width to force scrolling on larger screens */
+}
+
+.carousel-inner {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.carousel img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: start; /* Snap to each image */
+}
+
+.nav-btn {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+    font-family: inherit;
+}
+
+.nav-btn:hover {
+    background: #ff1493;
+}
+
+#gift-box img, #flowers img {
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+.bold-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.big-text {
+    font-size: 3rem;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.letter-container {
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.rose-petal {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(45deg, #ff69b4, #ffb6c1);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .title { font-size: 2.5rem; }
+    .text { font-size: 1.5rem; }
+    .big-text { font-size: 4rem; }
+    .carousel img { width: 250px; height: 250px; }
+}

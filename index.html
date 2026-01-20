@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Wifey!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Chapter 0 -->
+        <div class="chapter active" id="chapter0">
+            <div class="content">
+                <p class="text" data-text="This is for you my love of my life ❤️"></p>
+                <button class="nav-btn" onclick="nextChapter(1)">Click Here →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="chapter" id="chapter1">
+            <div class="content">
+                <h2 class="title">When you first entered my life</h2>
+                <p class="text" data-text="I didn’t know it that day, but this picture changed everything."></p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="Images/Pic1.jpg" alt="Pic 1">
+                        <img src="Images/Pic2.jpg" alt="Pic 2">
+                        <img src="Images/Pic3.jpg" alt="Pic 3">
+                        <img src="Images/Pic16.jpg" alt="Pic 16">
+                    </div>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(2)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter" id="chapter2">
+            <div class="content">
+                <h2 class="title">Funny & Cute Moments</h2>
+                <p class="text" data-text="Every moment with you was perfect."></p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="Images/Pic4.jpg" alt="Pic 4">
+                        <img src="Images/Pic5.jpg" alt="Pic 5">
+                        <img src="Images/Pic6.jpg" alt="Pic 6">
+                    </div>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(3)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter" id="chapter3">
+            <div class="content">
+                <h2 class="title">Our Fights</h2>
+                <p class="text" data-text="We fought, misunderstood, but never stopped choosing each other."></p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="Images/Pic7.jpg" alt="Pic 7">
+                        <img src="Images/Pic8.jpg" alt="Pic 8">
+                        <img src="Images/Pic9.jpg" alt="Pic 9">
+                    </div>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(4)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter" id="chapter4">
+            <div class="content">
+                <h2 class="title">What you mean to me</h2>
+                <p class="text" data-text="You are my peace. My comfort. My Wifey."></p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="Images/Pic10.jpg" alt="Pic 10">
+                        <img src="Images/Pic11.jpg" alt="Pic 11">
+                        <img src="Images/Pic12.jpg" alt="Pic 12">
+                    </div>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(5)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter" id="chapter5">
+            <div class="content">
+                <h2 class="title">Special Memories</h2>
+                <p class="text" data-text="Every memory with you is my favorite."></p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="Images/Pic13.jpg" alt="Pic 13">
+                        <img src="Images/Pic14.jpg" alt="Pic 14">
+                        <img src="Images/Pic15.jpg" alt="Pic 15">
+                    </div>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(6)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="chapter" id="chapter6">
+            <div class="content">
+                <div id="gift-box">
+                    <img src="Images/giftbox.png" alt="Gift Box" id="gift-img">
+                    <button class="nav-btn" onclick="revealFlowers()">Click Here →</button>
+                </div>
+                <div id="flowers" style="display: none;">
+                    <p class="bold-text">THIS IS FOR YOU 🌸</p>
+                    <img src="Images/flowers.png" alt="Flowers">
+                    <button class="nav-btn" onclick="nextChapter(7)">Next →</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Chapter 7 -->
+        <div class="chapter" id="chapter7">
+            <div class="content">
+                <h1 class="big-text">Happy Birthday to you, mine beautiful Wifey ❤️</h1>
+                <div class="letter-container">
+                    <p>Happy Birthday, mine beautiful wifey! 🥰 Every moment with you feels like a dream, and I’m so grateful to have you in my life. May your day be filled with all the love, laughter, and sweetness you bring into my world every single day. I love you more than words can ever say, meri jaan.</p>
+                </div>
+                <button class="nav-btn" onclick="nextChapter(8)">Next →</button>
+            </div>
+        </div>
+
+<!-- Chapter 8 -->
+        <div class="chapter" id="chapter8">
+            <div class="content">
+                <h1 class="big-text">Thank You ❤️</h1>
+                <div class="letter-container">
+                    <p>Thank you for coming in My life wifey you make my life better and happy your mine love mine life your meri jaan you make me alive you make me happy always thank you so much for coming in my life wifey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
